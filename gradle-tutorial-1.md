@@ -39,25 +39,25 @@
 - The task defines the step-by-step automation instructions.
 - Let's try to do some basic stuff with gradle now.
 
-    ```groovy
+```groovy
 
-        task helloworld{
-            doLast{
-                println "Hello World"
-            }
+    task helloworld{
+        doLast{
+            println "Hello World"
         }
-    ```
+    }
+```
 
-    ```BASH
-    00000000@LAPPYID MINGW64 ~/tech/gradle/test (master)
-    $ gradle helloworld
+```BASH
+00000000@LAPPYID MINGW64 ~/tech/gradle/test (master)
+$ gradle helloworld
 
-    > Task :helloworld
-    Hello World
+> Task :helloworld
+Hello World
 
-    BUILD SUCCESSFUL in 913ms
-    1 actionable task: 1 executed
-    ```
+BUILD SUCCESSFUL in 913ms
+1 actionable task: 1 executed
+```
 
 </strong>
 </p>
