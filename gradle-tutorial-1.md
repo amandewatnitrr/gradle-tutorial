@@ -59,5 +59,27 @@ BUILD SUCCESSFUL in 913ms
 1 actionable task: 1 executed
 ```
 
+## Gradle's Domain Specific Language
+
+- Just before this section, we implemented a very basic build script.
+- Gradle provides a higher level of abstraction language, soc called `(DSL) - Domain Specific Language` to express your build automation needs.
+- There are 2 options to choose from:
+  - <img src="https://img.shields.io/badge/Groovy-4298B8?style=plastice&logo=Groovy&logoColor=white"> DSL
+  - <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=plastice&logo=Kotlin&logoColor=white"> DSL
+- In the example for demonstration we used <img src="https://img.shields.io/badge/Groovy-4298B8?style=plastice&logo=Groovy&logoColor=white"> DSL, which means we used the semantics of the Groovy language to express our build automation needs, and we can implement any imperative logic using groovy syntax.
+
+<img src="https://github.com/amandewatnitrr/gradle-tutorial/blob/master/imgs/code-example-1.png">
+
+- The Keyword `task` is a method call on an API available to the Gradle build script.
+- We can find this method in the DSL reference for the core type project.
+- Effectively, we're expressing here that we will want to create a task for project.
+- The `string` parameter we provide is the name of the task.
+- In groovy we don't have to add parenthesis for the method calls as they are optional and we didn't define them to make it more readable.
+- The method call returns a new instance of the type `task`.
+
+<img src="https://github.com/amandewatnitrr/gradle-tutorial/blob/master/imgs/code-example-2.png">
+
+- In here, we can find the method doLast, which defines the action executed at runtime.
+
 </strong>
 </p>
