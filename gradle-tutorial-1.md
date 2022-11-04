@@ -68,7 +68,7 @@ BUILD SUCCESSFUL in 913ms
   - <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=plastice&logo=Kotlin&logoColor=white"> DSL
 - In the example for demonstration we used <img src="https://img.shields.io/badge/Groovy-4298B8?style=plastice&logo=Groovy&logoColor=white"> DSL, which means we used the semantics of the Groovy language to express our build automation needs, and we can implement any imperative logic using groovy syntax.
 
-<img src="https://github.com/amandewatnitrr/gradle-tutorial/blob/master/imgs/code-example-1.png">
+<img src="https://github.com/amandewatnitrr/gradle-tutorial/blob/master/imgs/code-example-2.png">
 
 - The Keyword `task` is a method call on an API available to the Gradle build script.
 - We can find this method in the DSL reference for the core type project.
@@ -77,10 +77,6 @@ BUILD SUCCESSFUL in 913ms
 - In groovy we don't have to add parenthesis for the method calls as they are optional and we didn't define them to make it more readable.
 - The method call returns a new instance of the type `task`.
 - In here, we can find the method doLast, which defines the action executed at runtime.
-
-<img src="https://github.com/amandewatnitrr/gradle-tutorial/blob/master/imgs/code-example-2.png">
-
-
 
 </strong>
 </p>
