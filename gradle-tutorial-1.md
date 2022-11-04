@@ -76,10 +76,11 @@ BUILD SUCCESSFUL in 913ms
 - The `string` parameter we provide is the name of the task.
 - In groovy we don't have to add parenthesis for the method calls as they are optional and we didn't define them to make it more readable.
 - The method call returns a new instance of the type `task`.
+- In here, we can find the method doLast, which defines the action executed at runtime.
 
 <img src="https://github.com/amandewatnitrr/gradle-tutorial/blob/master/imgs/code-example-2.png">
 
-- In here, we can find the method doLast, which defines the action executed at runtime.
+
 
 </strong>
 </p>
