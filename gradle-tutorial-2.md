@@ -81,7 +81,7 @@
 
 ## Defining and Configuring a Task
 
-<img width="30%" align="left" src="https://github.com/amandewatnitrr/gradle-tutorial/blob/master/imgs/gradle18.png">
+<img width="20%" align="left" src="https://github.com/amandewatnitrr/gradle-tutorial/blob/master/imgs/gradle18.png">
 
 - A task defines executable unit of work.
 - The logic to be executed is defined in one or many actions. We've seen the very simple task in action.
@@ -89,6 +89,12 @@
 - Gradle calls those tasks `ad hoc tasks` .
 - As soon as we dive deeper, you'll find that gradle also lets you specify a type.
 - Let's quickly compare both the approaches.
+
+### Ad Hoc Tasks
+
+- `Ad hoc` tasks are a good fit for one-off action implementations.
+- We did not need to define an explicit type as they automatically use the default implementation. o the task interface.
+- That default implementation is called `DefaultTask`.
 
 </strong>
 </p>
