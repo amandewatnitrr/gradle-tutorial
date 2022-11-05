@@ -182,7 +182,7 @@
 
 ### Directed Acyclic Graph
 
-<img width="40%" src="https://github.com/amandewatnitrr/gradle-tutorial/blob/master/imgs/code-example-8.png">
+<img src="https://github.com/amandewatnitrr/gradle-tutorial/blob/master/imgs/code-example-8.png">
 
 - In the last topic we learned about task dependencies.
 - Tasks are not limited to a single dependency. In fact, we can declare as many as we want.
