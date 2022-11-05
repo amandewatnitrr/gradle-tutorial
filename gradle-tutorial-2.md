@@ -83,5 +83,12 @@
 
 <img width="30%" align="left" src="https://github.com/amandewatnitrr/gradle-tutorial/blob/master/imgs/gradle18.png">
 
+- A task defines executable unit of work.
+- The logic to be executed is defined in one or many actions. We've seen the very simple task in action.
+- It simply rendered a message to the terminal.
+- Gradle calls those tasks `ad hoc tasks` .
+- As soon as we dive deeper, you'll find that gradle also lets you specify a type.
+- Let's quickly compare both the approaches.
+
 </strong>
 </p>
