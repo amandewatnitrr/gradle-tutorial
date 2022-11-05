@@ -78,5 +78,43 @@ BUILD SUCCESSFUL in 913ms
 - The method call returns a new instance of the type `task`.
 - In here, we can find the method doLast, which defines the action executed at runtime.
 
+## Using the Gradle Wrapper
+
+- As we began working with the gradle, all the learners installed the gradle runtime with a specific version Gradle API which continues to evolve with newer version of Gradle releases.
+- It is not unheard of that a breaking change is introduced between two major versions. As soon as we want to upgrade to the newer version of gradle, we'll have to install the new runtime and potentially change the use of the API in your build script.
+- Thinks of this workflow in the context of an enterprise environment, we may not just work on a single project, but maybe 10 or 20 or even more. That's espescially common in the world of microservices.
+- Do you really want to maintain a set of gradle installation on your developer machine and switch b/w them depending on the project that you are working on. Not really...
+- Gradle offers a solution to this problem, we can standardize the gradle version for project, that is compatible with it by checking in a couple of files. Gradle calls this functionality, the `Wrapper`.
+
+- Let's understand the typical workflow with example:
+
+    ```BASH
+
+    ```
+
+  - `gradle wrapper` command will create a wrapper files for the project.
+  - A new directory is created by the name `gradle` that spells out the gradle version and the URL to resolve the gradle distribution from.
+  -
+
+    ```bash
+    223072287@G6PX7NQ3E MINGW64 ~/tech/gradle/test (master)
+    $ gradle wrapper
+
+    BUILD SUCCESSFUL in 1s
+    1 actionable task: 1 executed
+    ```
+
+  - The Command also creates a script compatible with common OS, we should check all of those file s into version control.
+  - Now how do we operate our project from here??
+  - Simply, execute the build with the wrapper script with the task as we did before.
+  - <img src="https://github.com/amandewatnitrr/gradle-tutorial/blob/master/imgs/code-example-3.png">
+
+- Using the `wrapper` has lot of benefits.
+  - Developers do not need to install the Gradle runtime.
+  - Developers can check out project source code and build right away.
+  - Wrapper works the same way on contiguous integration servers.
+  - This method of operation also works on continuous integration servers and relieves you from the burden of having to maintain multiple gradle installations.
+
+
 </strong>
 </p>
