@@ -90,11 +90,95 @@
 - As soon as we dive deeper, you'll find that gradle also lets you specify a type.
 - Let's quickly compare both the approaches.
 <br><br>
+
 ### Ad Hoc Tasks
 
+<img width="30%" src="https://github.com/amandewatnitrr/gradle-tutorial/blob/master/imgs/code-example-6.png">
+<img width="30%" src="https://github.com/amandewatnitrr/gradle-tutorial/blob/master/imgs/code-example-7.png">
+
 - `Ad hoc` tasks are a good fit for one-off action implementations.
-- We did not need to define an explicit type as they automatically use the default implementation. o the task interface.
+- We did not need to define an explicit type as they automatically use the default implementation of the task interface.
 - That default implementation is called `Default Task`.
+- More complex task logic can be abstracted by a Class implementation.
+- The Implementation is literally hidden in the class. Gradle calls those tasks `typed tasks` as they explicitly declare a type with a dedicated purpose.
+- So, for example the copy type can copy files and directories. As an end user, you're the only configured the run-time behavior by setting property value or calling methods. No need to declare any actions.
+- Most builds have to deal with files and directories. Say you wanted to copy files from a source directory to a target directory and then packaged them into a SIP file. That's very easy to achieve with Gradle.
+
+- Let's start with the copy operation
+  -
+  
+    ```groovy
+    task copydocs(type: Copy)
+    {
+        from "src"
+        into "build/docs"
+        include "**/*md"
+        includeEmptyDirs = false
+    }
+    ```
+
+    ```bash
+    000000000@LAPPY_CODE MINGW64 ~/tech/gradle/copy-project (master)
+    $ gradle copydocs
+
+    BUILD SUCCESSFUL in 1s
+    1 actionable task: 1 executed
+    ```
+
+  - Hence, we get a folder where all the content of `src` is copied.
+  - We can implement the archiving task accordingly.
+
+- Let's now write a task for ZIPing the file
+  -
+
+    ```groovy
+    task copydocs(type: Copy)
+        {
+            from "src"
+            into "build/docs"
+            include "**/*md"
+            includeEmptyDirs = false
+        }
+
+    task createZip(type: Zip)
+        {
+            from "build/docs"
+            archiveFileName = "docs.zip"
+            destinationDirectory = file("build/dist")
+        }
+    ```
+
+    ```bash
+    000000000@LAPPY_CODE MINGW64 ~/tech/gradle/copy-project (master)
+    $ gradle createZip
+
+    BUILD SUCCESSFUL in 998ms
+    1 actionable task: 1 executed
+    ```
+
+  - And then as a result, we can see that a `docs.zip` file is created in the `build/dist` folder.
+  - There's one more aspect, we will study in this lesson, which is called `task dependencies`.
+  - Earlier we ran the task in a specific order. First we ran the `copydocs` task and then the `createZip` task.
+  - To make sure that the copy operation happens before the zip operation, we can define a dependency between the two tasks. We can do this using the method called `dependsOn`. So ultimately this will call the copy operation beforehand.
+  -
+
+    ```groovy
+    task copydocs(type: Copy)
+        {
+            from "src"
+            into "build/docs"
+            include "**/*md"
+            includeEmptyDirs = false
+        }
+
+    task createZip(type: Zip)
+        {
+            from "build/docs"
+            archiveFileName = "docs.zip"
+            destinationDirectory = file("build/dist")
+            dependsOn copydocs
+        }
+    ```
 
 </strong>
 </p>
