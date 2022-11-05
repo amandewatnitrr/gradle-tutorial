@@ -97,7 +97,7 @@ BUILD SUCCESSFUL in 913ms
   -
 
     ```bash
-    223072287@G6PX7NQ3E MINGW64 ~/tech/gradle/test (master)
+    000000000@LAPPY_CODE MINGW64 ~/tech/gradle/test (master)
     $ gradle wrapper
 
     BUILD SUCCESSFUL in 1s
