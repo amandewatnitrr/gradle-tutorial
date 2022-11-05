@@ -21,7 +21,7 @@
 - Gradle automatically derives the name of the project from he directory that contains the `build.gradle` file.
 - The build in task projects can provide us with this information.
 - Let's declare a `settings.gradle` file and use it to declare a more appropriate name, say `hello-world`.
-- 
+-
 
 <img src="https://github.com/amandewatnitrr/gradle-tutorial/blob/master/imgs/code-example-5.png">
 
@@ -78,8 +78,6 @@
     1 actionable task: 1 executed
     Watched directory hierarchies: [C:\Users\000000000\tech\gradle\test]
     ```
-
-<img src="https://github.com/amandewatnitrr/gradle-tutorial/blob/master/imgs/gradle19.png">
 
 ## Defining and Configuring a Task
 
