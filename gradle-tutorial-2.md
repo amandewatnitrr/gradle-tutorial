@@ -79,7 +79,7 @@
     Watched directory hierarchies: [C:\Users\000000000\tech\gradle\test]
     ```
 
-<img width="30%" align="left" src="https://github.com/amandewatnitrr/gradle-tutorial/blob/master/imgs/gradle19.png">
+<img src="https://github.com/amandewatnitrr/gradle-tutorial/blob/master/imgs/gradle19.png">
 
 ## Defining and Configuring a Task
 
