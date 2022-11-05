@@ -87,11 +87,6 @@ BUILD SUCCESSFUL in 913ms
 - Gradle offers a solution to this problem, we can standardize the gradle version for project, that is compatible with it by checking in a couple of files. Gradle calls this functionality, the `Wrapper`.
 
 - Let's understand the typical workflow with example:
-
-    ```BASH
-
-    ```
-
   - `gradle wrapper` command will create a wrapper files for the project.
   - A new directory is created by the name `gradle` that spells out the gradle version and the URL to resolve the gradle distribution from.
   -
