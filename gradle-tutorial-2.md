@@ -81,7 +81,7 @@
 
 ## Defining and Configuring a Task
 
-<img width="20%" align="left" src="https://github.com/amandewatnitrr/gradle-tutorial/blob/master/imgs/gradle18.png">
+<img width="60%" align="left" src="https://github.com/amandewatnitrr/gradle-tutorial/blob/master/imgs/gradle18.png">
 
 - A task defines executable unit of work.
 - The logic to be executed is defined in one or many actions. We've seen the very simple task in action.
