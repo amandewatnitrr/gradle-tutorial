@@ -1,5 +1,5 @@
 task helloworld{
     doLast{
-        println "Hello World"
+        println "Hello World -" + version
     }
 }
