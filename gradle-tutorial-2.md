@@ -89,12 +89,12 @@
 - Gradle calls those tasks `ad hoc tasks` .
 - As soon as we dive deeper, you'll find that gradle also lets you specify a type.
 - Let's quickly compare both the approaches.
-
+<br><br>
 ### Ad Hoc Tasks
 
 - `Ad hoc` tasks are a good fit for one-off action implementations.
 - We did not need to define an explicit type as they automatically use the default implementation. o the task interface.
-- That default implementation is called `DefaultTask`.
+- That default implementation is called `Default Task`.
 
 </strong>
 </p>
