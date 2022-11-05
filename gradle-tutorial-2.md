@@ -180,5 +180,26 @@
         }
     ```
 
+### Directed Acyclic Graph
+
+<img width="40%" src="https://github.com/amandewatnitrr/gradle-tutorial/blob/master/imgs/code-example-8.png">
+
+- In the last topic we learned about task dependencies.
+- Tasks are not limited to a single dependency. In fact, we can declare as many as we want.
+- the execution order of the task dependencies is non-deterministic.
+- Say we have a task A, that depends on task B and task C. At runtime B can be executed first or C can bve executed first.
+- Often times the execution order of task dependencies does not really matter as long as it happens.
+- But under certain circumstances, we need to enforce a specific order.
+- In such a case we will declare a depends on from B to C or vice-versa. There are other methods available to the task API that influences task execution order. Most specifically must run after and finalized by.
+- For a deeper exposure, refer to the Gradle User Guide.
+- At runtime, Gradle builds a so called `Directed Acyclic Graph (DAG)` for tasks in memory.
+- With that knowledge the runtime will know all the tasks participating in the build and there proper execution order.
+- Every task is represented by a Node.
+- Task dependencies materialize as Graph Edges.
+- It's important to understand that the graph cannot form a cycle.
+- For example, task A cannot be dependent on task B while at the same time be depending on A.
+- Gradle does not offer a builin feture for visualizing the task graph of a project.
+- To emulate the task dependencies in action, we can run the build with the command line option `--dry-run`. The option shows all the task on the terminal, but doesn't execute there actions.
+
 </strong>
 </p>
