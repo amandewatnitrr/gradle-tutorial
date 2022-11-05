@@ -81,8 +81,7 @@
 
 ## Defining and Configuring a Task
 
-![](![](https://github.com/amandewatnitrr/gradle-tutorial/blob/master/imgs/gradle18.png)
-)
+![](https://github.com/amandewatnitrr/gradle-tutorial/blob/master/imgs/gradle18.png)
 
 </strong>
 </p>
