@@ -79,6 +79,10 @@
     Watched directory hierarchies: [C:\Users\000000000\tech\gradle\test]
     ```
 
+## Defining and Configuring a Task
+
+![](![](https://github.com/amandewatnitrr/gradle-tutorial/blob/master/imgs/gradle18.png)
+)
 
 </strong>
 </p>
