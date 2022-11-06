@@ -58,9 +58,37 @@
   - <img src="https://shields.io/badge/Binary-Plugins-ffff00?logo=gradle&style=plastic">
     - Binary Plugins are meant for more complex logic bundled into a JAR File.
     - The reason being that they can reuse the functionality across multiple self-contained software projects, and those software projects usually live in different version control repositories.
-- Let's have a look at an example:
+- Let's have a look at an example for Script Plugin:
 
-  - 
+  - In this scenario, we decided to externalize the build logic into script plugin that deals with creating an archive for set of files. Well let's have a look at the `build.gradle` file here.
+  - We are working on the same copy task and zip task, so makie sure you have the exercise file available.
+  - So, in the `archive.gradle` file, we have defined a task called `createZip` that depends on the `copy` task.
+  - We don't have the tasks directly written in the `build.gradle` file, but we are calling the `apply from` method and passing the path to the `archive.gradle` file.
+  - `build.gradle`
+
+    ```groovy
+        apply from: "archiving.gradle" // This is a Script Plugin.
+    ```
+
+    `archiving.gradle`
+
+    ```groovy
+        task copydocs(type: Copy)
+            {
+                from "src"
+                into "build/docs"
+                include "**/*md"
+                includeEmptyDirs = false
+            }
+
+        task createZip(type: Zip)
+            {
+                from "build/docs"
+                archiveFileName = "docs.zip"
+                destinationDirectory = file("build/dist")
+                dependsOn copydocs
+            }
+    ```
 
 </strong>
 </p>
