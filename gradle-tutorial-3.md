@@ -139,7 +139,7 @@
     `OUTPUT`
 
     ```bash
-    223072287@G6PX7NQ3E MINGW64 ~/tech/gradle/archiving-project-binary_plugin (master)
+    000000000@LAPPY_CODE MINGW64 ~/tech/gradle/archiving-project-binary_plugin (master)
     $ gradle createZip
 
     BUILD SUCCESSFUL in 2s
