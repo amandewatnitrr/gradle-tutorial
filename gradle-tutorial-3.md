@@ -94,5 +94,59 @@
             }
     ```
 
+    `OUTPUT`
+
+    ```bash
+    000000000@LAPPY_CODE MINGW64 ~/tech/gradle/archiving-project (master)
+    $ gradle createZip
+    Starting a Gradle Daemon (subsequent builds will be faster)
+
+    BUILD SUCCESSFUL in 11s
+    2 actionable tasks: 2 executed
+    ```
+
+- Now let's have a look at examples for Binary Plugins:
+  - Bianry Plugins are available as a part of Gradle Distribution.
+  - They are also called `Core Plugins`, but there are also some community plugins out there, which are available on the Gradle Plugin Portal.
+  - For this scenario, we decide to user the so-called base plugin.
+  - The base plugin provides tasks and conventions common to most projects.
+  - `build.gradle`
+
+    ```groovy
+        apply from: "archiving.gradle"
+    ```
+
+    `archiving.gradle`
+
+    ```groovy
+        apply plugin: "base"
+
+        task copydocs(type: Copy)
+            {
+                from "src"
+                into "build/docs"
+                include "**/*md"
+                includeEmptyDirs = false
+            }
+
+        task createZip(type: Zip)
+            {
+                from "build/docs"
+                dependsOn copydocs
+            }
+    ```
+
+    `OUTPUT`
+
+    ```bash
+    223072287@G6PX7NQ3E MINGW64 ~/tech/gradle/archiving-project-binary_plugin (master)
+    $ gradle createZip
+
+    BUILD SUCCESSFUL in 2s
+    2 actionable tasks: 2 executed
+    ```
+
+  - Now we can write and distribute our own binary plugins, but this topic goes beyond the scope of this guide.
+
 </strong>
 </p>
