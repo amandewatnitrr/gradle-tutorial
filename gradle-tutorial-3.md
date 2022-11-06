@@ -53,11 +53,15 @@
 - Every gradle build definition starts with a build script. The more you work on different build automation projects, the more you will notice that certain build code is similar or even the same. To avoid having to copy/paste build code from project to project, Gradle introduced the concept of so-called plugin.
 - There are 2 types of plugins:
   - <img src="https://shields.io/badge/Script-Plugins-00cc44?logo=gradle&style=plastic">
+
     - A Script Plugin is just another build script that can be included into your main `build.gradle` file.
     - The Primary reason for wanting to use the script plugin is to split up the build logic and make it more maintainable.
+
   - <img src="https://shields.io/badge/Binary-Plugins-ffff00?logo=gradle&style=plastic">
+
     - Binary Plugins are meant for more complex logic bundled into a JAR File.
     - The reason being that they can reuse the functionality across multiple self-contained software projects, and those software projects usually live in different version control repositories.
+
 - Let's have a look at an example for Script Plugin:
 
   - In this scenario, we decided to externalize the build logic into script plugin that deals with creating an archive for set of files. Well let's have a look at the `build.gradle` file here.
